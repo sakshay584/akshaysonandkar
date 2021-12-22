@@ -81,8 +81,8 @@
                 <p class="mb-4"><span class="text-muted"></span></p>
 
                 <div class="mb-5">
-                  <p>I was completely amazed when I saw an e-ink display for the first time, I could not distinguish it from an actual paper. When I got my hands on a waveshare e-paper module. I decided to prank my friends by printing a photo on it and keeping it on my desk to see if they could tell if it was an electronic device. Obviously, no one could guess. To make it interesting I attached a wi-fi module to it, clicked a selfie with my friend and flashed it on the photo frame in front of him without telling. It was great fun to see him get shocked when the photo frame that he thought was a physical photograph suddenly transformed itself.   </p>
-                    <p>Currently I am trying to refine this project on both the software and hardware front to convert this into a product. I have included floyd steinberg dithering to generate more shades from just three colors by introducing noise. I have redesigned the ESP 32 PCB to accomodate a rechargeable battery and fit easily into a normal photo frame case. The android app helps in uploading photos onto the e-paper display.  </p>
+                  <p>I was completely amazed when I saw an e-ink display for the first time, I could not distinguish it from an actual paper. When I got my hands on an e-paper module, I decided to prank my friends by printing a photo on it and to see if they could notice that it was an electronic device. Obviously, no one could guess. To make it interesting I attached a wi-fi module to it, clicked a selfie with my friend and flashed it on the photo frame in front of him. It was great fun to see him utterly shocked when the photo frame suddenly transformed itself.   </p>
+                    <p> I am trying to refine this project on both software as well as the hardware front to convert this into a product. I have included floyd steinberg dithering to generate more shades from just three colors by introducing noise. I have redesigned the ESP 32 PCB to accomodate a rechargeable battery and fit easily into a normal photo frame case. The android app helps in uploading photos onto the e-paper display. As the photoframe is connected to Wi-Fi, even your friends can post photos on it over the internet.     </p>
  
 
 
@@ -107,7 +107,7 @@
 
       <div class="site-section pb-0">
         <div class="container">
-            <p>.</p>
+           
           <div class="row align-items-stretch">
             
             <div class="col-md-4 ml-auto" data-aos="fade-up" data-aos-delay="100">
@@ -117,7 +117,7 @@
                 <p class="mb-4"><span class="text-muted"></span></p>
 
                 <div class="mb-5">
-                  <p>Your friends can post pictures on your wall quite literally. This is a wi-fi e-ink photo frame that looks completely realistic. It connects to the internet and lets you and your friends upload photos on it. It has a timely refresh that keeps posting new photos everyday from the shuffle deck.  </p>
+                  <p>Your friends can post pictures on your wall, quite literally! This is a wi-fi e-ink photo frame that looks completely realistic. It connects to the internet and lets you and your friends upload photos on it. It has a timely refresh that keeps posting new photos everyday from the shuffle deck.  </p>
 
  
 
@@ -127,7 +127,7 @@
                 <ul class="list-unstyled list-line mb-5">
                   <li>Post photos remotely</li>
                   <li>Automatically refresh photos every morning</li>
-                  <li>Subscribe to see new artworks and famous thoughts</li>
+                  <li>Subscribe to see new artworks and famous quotes</li>
                   <li>Print pictures in both portrait and landscape mode</li>
                 </ul>
  
@@ -159,7 +159,7 @@
                 <p class="mb-4"><span class="text-muted"></span></p>
 
                 <div class="mb-5">
-                  <p>The e-ink display has 2 coloring options: 2 colours and 3 colours. 2 Colour versions have black and white, 3 has an additional yellow. The code is written in java script which takes an image input and converts it to a 3 color level image. For a given colour input pixel, the output colour is decided based on its R, G and B value. The coordinates (R , resultant of G and B). The e paper display communicates on I2C protocol and can update only 1 color at a time due to magnetisation constraints. The ESP module first sets all pixels to white, black second and then the yellow spots. Total development process takes around 10 seconds. Best part of an e ink is that it doesn't consume to retain the photo. Once it is printed, it can go on for years.   </p>
+                  <p>The e-ink display has 2 coloring options: bi-colour and tri-colour. bi-colour version has black and white while tri-colour version has an additional yellow. The code is written in java script which takes an image input and converts it to a 3 color level image. For a given input pixel, the output colour is decided based on its R, G and B value. The coordinates (R , resultant of G and B) decides the final color based on its position in the graph. The e-paper display communicates on SPI protocol and can update one color at a time by magnetising the screen. The ESP module first fills in the pixels in white, black second and then the yellow spots. The photo development process takes around 10 seconds usually. Best part of an e-ink paper is that it doesn't consume power to retain the photo. Once it is printed, it can stay intact for years.   </p>
 
 
                 </div>
@@ -186,7 +186,7 @@
                 <p class="mb-4"><span class="text-muted"></span></p>
 
                 <div class="mb-5">
-                  <p>This video demonstrates how a picture evolves over 10 seconds. This is my picture with my mother during my graduation ceremony. The interesting part to note here is that the colour of the hood on my shoulder appears to be dark orange/ red. The e-paper palette doesn't have any of these colors. This is achieved by deliberate addition of noise to the picture. This concept is explained in detail in the next section.    </p>
+                  <p>This video demonstrates how a picture evolves over 10 seconds. This is my picture with my mother during the graduation ceremony. The interesting part to note here is that the colour of the hood on my shoulder appears to be dark orange/ red. However, the e-paper palette doesn't have any of those colors. This is achieved by deliberate addition of noise to the picture. This concept is explained in detail in the next section.    </p>
  
 
 
@@ -227,15 +227,14 @@
                 <p class="mb-4"><span class="text-muted"></span></p>
 
                 <div class="mb-5">
-                  <p>In case of smooth colored pictures during the Level processing an image loses a lot of thin
-details expressed by a smooth gradient of colors situated close to each other in the color diagram.
-The most of gradients cover large areas of pictures taken by camera, thus it is possible to
-express some shades by mixing the closest available colors on those areas. </p>
-                    <p>Eyes feel the average color of pixels in a small area. It means there are more seeming
-colors, but on the other hand the picture seems noisy or as if it has low resolution. Good
-algorithms of color the mixing can prevent pixelation (creating clearly seen small grain-like areas
-in a picture). One of them is the Dithering. </p>
-                    <p> You can see the difference between "level" images and "dithering" images</p>
+                  <p>In case of smooth colored pictures with the "level processing", an image loses a lot of 
+                      details expressed by a smooth gradient of colors situated close to each other in the color diagram.
+                      Most of gradients covers large areas of the pictures, thus it is possible to express some shades by mixing the closest available colors on those areas. </p>
+                    <p>Eyes feel the average color of pixels in a small area. It means that there are more seeming
+                        colors, but on the other hand the picture seems noisy as if it has low resolution. Good
+                        algorithms of color mixing can prevent pixelation (creating clearly seen small grain-like areas
+                        in a picture). One of them is the Dithering. </p>
+                    <p> You can see the difference between "level" images and "dithering" images in the photos on the left side.</p>
 
                 </div>
  
@@ -262,7 +261,7 @@ in a picture). One of them is the Dithering. </p>
                 <p class="mb-4"><span class="text-muted"></span></p>
 
                 <div class="mb-5">
-                  <p>This image illustrates the working of the two e-paper projects: 1. 7 inch photo frame and 2 inch thought plate. Both use ESP wi-fi chips to connect to the internet via home network through the router. You can access the web portal to upload your image. Javascript source code converts the image into 3 colours. ESP then retrieves this image from the server and flashes it on to the photo frame. The automation enables ESP to rise from deep sleep mode every morning at 7 and download a new photo from the shuffle deck to greet you with a new photo every morning.   </p>
+                  <p>This image illustrates the working of the two e-paper projects: A 7.5 inch photo frame and a 2.3 inch thought plate. Both use ESP wi-fi chips to connect to the internet via home network through the router. You can access the web portal to upload your image. Javascript source code converts the image into 3 colours. ESP then retrieves this image from the server and flashes it on to the photo frame. The automation enables ESP to rise from deep sleep mode everyday at 7 AM and download a new photo from the shuffle deck to greet you with a new photo every morning.   </p>
 
  
 
